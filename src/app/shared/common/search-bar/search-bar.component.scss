@@ -1,0 +1,39 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 550px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    img {
+        height: 20px;
+    }
+}
+
+.category-box {
+    padding: 0 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+.btn-search {
+    padding: 0 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
