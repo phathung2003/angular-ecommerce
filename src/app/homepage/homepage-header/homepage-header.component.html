@@ -1,9 +1,44 @@
-<div class="header">
+<header>
+  <!-- Logo -->
   <img class="logo" src="assets/icons/logo.avif" alt="Logo" />
 
+  <!-- Danh mục -->
+  <button class="category" aria-label="Danh mục sản phẩm">
+    <i class="icon-menu"></i> Danh mục sản phẩm
+  </button>
+
+  <!-- Thanh tìm kiếm -->
   <app-search-bar />
 
-  <div>
-    <p>Shopping cart here</p>
+  <div class="user-container">
+    <!-- Đăng nhập / Đăng ký -->
+
+    <button>
+      <lucide-icon name="User" class="icon" aria-label="Đăng nhập. Đăng ký" />
+      <span>Đăng nhập<br />Đăng ký</span>
+    </button>
+
+    <!-- Thông báo -->
+
+    <button class="icon-wrapper" aria-label="Thông báo">
+      <lucide-icon name="Bell" class="icon" />
+      <span class="badge" data-testid="notify-badge" *ngIf="notifyCount > 0">
+        {{ notifyCount }}
+      </span>
+    </button>
+
+    <!-- Giỏ hàng -->
+    <button class="cart-wrapper">
+      <div class="icon-wrapper">
+        <lucide-icon name="ShoppingCart" class="icon" />
+        <span class="badge" data-testid="cart-badge" *ngIf="notifyCount > 0">
+          {{ cartItemCount }}
+        </span>
+      </div>
+      <span>
+        Giỏ hàng của bạn có<br />
+        ({{ cartItemCount }}) sản phẩm
+      </span>
+    </button>
   </div>
-</div>
+</header>

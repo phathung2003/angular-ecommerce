@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-homepage-header',
   templateUrl: './homepage-header.component.html',
@@ -7,6 +6,8 @@ import { Component } from '@angular/core';
 })
 export class HomepageHeaderComponent {
   search_text = '';
+  cartItemCount = 3;
+  notifyCount = 1;
   items = ['Test'];
 
   get searchItems() {

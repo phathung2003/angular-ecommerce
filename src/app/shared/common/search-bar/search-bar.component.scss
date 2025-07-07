@@ -1,23 +1,17 @@
 .search-container {
     display: flex;
     align-items: center;
-    width: 550px;
+    width: auto;
     height: 50px;
     border: 1px solid white;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-
-    img {
-        height: 20px;
-    }
 }
 
-.category-box {
-    padding: 0 15px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+.category-box,
+.search-button {
+    background-color: aquamarine;
 }
 
 .search-box {
@@ -29,8 +23,9 @@
     padding: 0 15px;
 }
 
-.btn-search {
+button {
     padding: 0 15px;
+    height: 100%;
     border: none;
     background: none;
     cursor: pointer;
