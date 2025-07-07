@@ -8,7 +8,14 @@ import { HomepageHeaderComponent } from './homepage/homepage-header/homepage-hea
 import { HomepageFooterComponent } from './homepage/homepage-footer/homepage-footer.component';
 import { SearchBarComponent } from './shared/common/search-bar/search-bar.component';
 import { BannerComponent } from './homepage/banner/banner.component';
-import { LucideAngularModule, ShoppingCart, User, Bell, Search } from 'lucide-angular';
+import {
+  LucideAngularModule,
+  ShoppingCart,
+  User,
+  Bell,
+  Search,
+  List,
+} from 'lucide-angular';
 
 @NgModule({
   declarations: [
@@ -23,7 +30,7 @@ import { LucideAngularModule, ShoppingCart, User, Bell, Search } from 'lucide-an
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    LucideAngularModule.pick({ ShoppingCart, User, Bell, Search }),
+    LucideAngularModule.pick({ ShoppingCart, User, Bell, Search, List }),
   ],
   providers: [],
   bootstrap: [AppComponent],

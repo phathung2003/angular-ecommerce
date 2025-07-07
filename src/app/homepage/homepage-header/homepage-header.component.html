@@ -3,42 +3,55 @@
   <img class="logo" src="assets/icons/logo.avif" alt="Logo" />
 
   <!-- Danh mục -->
-  <button class="category" aria-label="Danh mục sản phẩm">
-    <i class="icon-menu"></i> Danh mục sản phẩm
-  </button>
+  <div class="desktop">
+    <button class="category" aria-label="Danh mục">
+      <span><lucide-icon name="list" /></span>
+      <span>Danh mục</span>
+    </button>
+  </div>
 
   <!-- Thanh tìm kiếm -->
   <app-search-bar />
 
-  <div class="user-container">
-    <!-- Đăng nhập / Đăng ký -->
-
-    <button>
-      <lucide-icon name="User" class="icon" aria-label="Đăng nhập. Đăng ký" />
-      <span>Đăng nhập<br />Đăng ký</span>
-    </button>
-
-    <!-- Thông báo -->
-
-    <button class="icon-wrapper" aria-label="Thông báo">
-      <lucide-icon name="Bell" class="icon" />
-      <span class="badge" data-testid="notify-badge" *ngIf="notifyCount > 0">
-        {{ notifyCount }}
-      </span>
-    </button>
+  <div class="mobile-container">
+    <!-- Danh mục -->
+    <div class="mobile">
+      <button aria-label="Danh mục">
+        <lucide-icon name="list" />
+      </button>
+      <span class="lable">Danh mục</span>
+    </div>
 
     <!-- Giỏ hàng -->
-    <button class="cart-wrapper">
-      <div class="icon-wrapper">
-        <lucide-icon name="ShoppingCart" class="icon" />
-        <span class="badge" data-testid="cart-badge" *ngIf="notifyCount > 0">
-          {{ cartItemCount }}
-        </span>
-      </div>
-      <span>
-        Giỏ hàng của bạn có<br />
-        ({{ cartItemCount }}) sản phẩm
-      </span>
-    </button>
+
+    <div>
+      <button class="cart-wrapper">
+        <div class="icon-wrapper">
+          <lucide-icon name="ShoppingCart" />
+          <span class="badge" data-testid="cart-badge" *ngIf="notifyCount > 0">
+            {{ cartItemCount > 99 ? "99+" : cartItemCount }}
+          </span>
+        </div>
+        <span class="lable">Giỏ hàng</span>
+      </button>
+    </div>
+
+    <!-- Đăng nhập / Đăng ký -->
+
+    <div>
+      <button aria-label="">
+        <div class="icon-wrapper">
+          <lucide-icon name="User" aria-label="Đăng nhập. Đăng ký" />
+          <span
+            class="badge"
+            data-testid="notify-badge"
+            *ngIf="notifyCount > 0"
+          >
+            {{ notifyCount > 99 ? "99+" : cartItemCount }}
+          </span>
+        </div>
+        <span class="lable">Đăng nhập</span>
+      </button>
+    </div>
   </div>
 </header>

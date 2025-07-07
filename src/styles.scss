@@ -2,9 +2,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+
+
 }
 
+.html {
+    font-size: 14px;
+    transition: transform 0.3s ease-in-out;
+}
+
+lucide-icon,
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+}
+
+span {
+    font-size: 0.75rem;
 }

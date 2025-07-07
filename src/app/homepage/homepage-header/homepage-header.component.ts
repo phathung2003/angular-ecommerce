@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
 })
 export class HomepageHeaderComponent {
   search_text = '';
-  cartItemCount = 3;
-  notifyCount = 1;
+  cartItemCount = 300;
+  notifyCount = 1000;
   items = ['Test'];
 
   get searchItems() {
