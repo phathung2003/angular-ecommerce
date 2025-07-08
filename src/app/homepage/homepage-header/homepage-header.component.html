@@ -1,4 +1,4 @@
-<header>
+<header class="layout-container">
   <!-- Logo -->
   <img class="logo" src="assets/icons/logo.avif" alt="Logo" />
 
@@ -28,7 +28,12 @@
       <a href="/" class="nav-item">
         <div class="icon-wrapper">
           <lucide-icon name="ShoppingCart" />
-          <span class="badge" data-testid="cart-badge" *ngIf="notifyCount > 0">
+          <span
+            class="badge no-info"
+            [class.has-badge]="notifyCount > 0"
+            *ngIf="cartItemCount > 0"
+            data-testid="cart-badge"
+          >
             {{ cartItemCount > 99 ? "99+" : cartItemCount }}
           </span>
         </div>
@@ -44,10 +49,11 @@
           <lucide-icon name="User" aria-label="Đăng nhập. Đăng ký" />
           <span
             class="badge"
-            data-testid="notify-badge"
+            [class.has-badge]="notifyCount > 0"
             *ngIf="notifyCount > 0"
+            data-testid="notify-badge"
           >
-            {{ notifyCount > 99 ? "99+" : cartItemCount }}
+            {{ notifyCount > 99 ? "99+" : notifyCount }}
           </span>
         </div>
         <span class="lable">Đăng nhập</span>
