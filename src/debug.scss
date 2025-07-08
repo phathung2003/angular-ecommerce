@@ -1,0 +1,29 @@
+$debug: 'true';
+
+@if $debug =='true' {
+
+    img,
+    lucide-icon {
+        outline: 1px dashed green;
+    }
+
+    span {
+        outline: 1px dashed chocolate;
+    }
+
+    button {
+        outline: 1px solid purple;
+    }
+
+
+    header,
+    footer {
+        outline: 3px double red;
+    }
+
+
+    nav,
+    div {
+        outline: 2px solid blue;
+    }
+}
