@@ -15,6 +15,10 @@ import {
   Bell,
   Search,
   List,
+  QrCode,
+  Banknote,
+  Clock,
+  CreditCard,
 } from 'lucide-angular';
 
 @NgModule({
@@ -30,7 +34,17 @@ import {
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    LucideAngularModule.pick({ ShoppingCart, User, Bell, Search, List }),
+    LucideAngularModule.pick({
+      ShoppingCart,
+      User,
+      Bell,
+      Search,
+      List,
+      QrCode,
+      Banknote,
+      Clock,
+      CreditCard,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

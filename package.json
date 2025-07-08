@@ -3,6 +3,8 @@
   "version": "0.0.3",
   "scripts": {
     "ng": "ng",
+    "prebuild": "node scripts/set-version.ts",
+    "prestart": "node scripts/set-version.ts",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",

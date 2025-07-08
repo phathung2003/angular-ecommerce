@@ -1,4 +1,89 @@
-footer {
-    background-color: antiquewhite;
-    padding: 10px;
+.footer-container {
+    border-top: 1px solid #ccc;
+    width: 100%;
+}
+
+.footer-inner {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+}
+
+.column {
+    background: #f0f0f0;
+    padding: 1rem;
+    top: 0;
+
+    h4 {
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+
+
+    a,
+    li {
+        margin-bottom: 6px;
+        color: #898989;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            color: #007bff;
+        }
+    }
+}
+
+.copyright-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (max-width: 1020px) {
+    .footer-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: none;
+    }
+}
+
+.vertical-icons-wrapper {
+    display: flex;
+    gap: 2rem;
+
+    a {
+        img {
+            width: 32px;
+            height: 32px;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        &:hover {
+            transform: scale(1.5);
+        }
+
+    }
+}
+
+.icon-with-text {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    /* icon trên, text dưới */
+    align-items: center;
+    /* canh giữa theo chiều ngang */
+    text-align: center;
+    /* canh giữa text */
 }

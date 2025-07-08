@@ -1,4 +1,4 @@
-$debug: 'true';
+$debug: 'false';
 
 @if $debug =='true' {
 
@@ -18,12 +18,12 @@ $debug: 'true';
 
     header,
     footer {
-        border: 3px double red;
+        border: 5px double red;
     }
 
 
     nav,
     div {
-        border: 2px solid blue;
+        border: 1px solid blue;
     }
 }
