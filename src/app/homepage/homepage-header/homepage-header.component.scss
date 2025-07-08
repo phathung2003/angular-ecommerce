@@ -3,14 +3,15 @@ header {
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 0.25rem;
 
   lucide-icon {
     margin-right: 0.3rem;
   }
 
   .logo {
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
   }
 
   .category {
@@ -25,9 +26,7 @@ header {
     border-radius: 4px;
   }
 
-  .mobile {
-    display: none;
-  }
+
 
   app-search-bar {
     flex: 1;
@@ -39,7 +38,7 @@ header {
     align-items: center;
     transition: transform 0.5s ease-in-out;
 
-    button {
+    .nav-item {
       position: relative;
       display: inline-flex;
       align-items: center;
@@ -47,12 +46,17 @@ header {
       border: none;
       cursor: pointer;
       margin-left: 1.25rem;
+      text-decoration: none;
+      color: #333;
     }
 
     .icon-wrapper {
       position: relative;
       display: inline-block;
       margin-right: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .badge {
         position: absolute;
@@ -87,42 +91,32 @@ header {
 
 
 @media (max-width: 768px) {
-  .desktop {
-    display: none;
-  }
-
   .mobile-container {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-
-    align-items: center;
-    padding: 0.5rem 0;
+    height: 5rem;
     background: #fff;
     border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     z-index: 1000;
 
-    >div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    >button,
-    .mobile {
+    .mobile,
+    .nav-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: none;
-      border: none;
-      cursor: pointer;
+      text-decoration: none;
+      color: #333;
+      font-size: 12px;
+
+      .lable {
+        margin-top: 0.5rem;
+      }
     }
   }
 }

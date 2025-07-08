@@ -4,8 +4,6 @@
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .html {
@@ -13,8 +11,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
-lucide-icon,
-.icon {
+lucide-icon {
     width: 1.5rem;
     height: 1.5rem;
     display: block;
@@ -22,4 +19,14 @@ lucide-icon,
 
 span {
     font-size: 0.75rem;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
 }

@@ -15,17 +15,17 @@
 
   <div class="mobile-container">
     <!-- Danh mục -->
-    <div class="mobile">
-      <button aria-label="Danh mục">
-        <lucide-icon name="list" />
-      </button>
-      <span class="lable">Danh mục</span>
-    </div>
+    <nav class="mobile">
+      <a href="/" class="nav-item">
+        <span><lucide-icon name="list" /></span>
+        <span class="lable">Danh mục</span>
+      </a>
+    </nav>
 
     <!-- Giỏ hàng -->
 
-    <div>
-      <button class="cart-wrapper">
+    <nav class="cart-wrapper">
+      <a href="/" class="nav-item">
         <div class="icon-wrapper">
           <lucide-icon name="ShoppingCart" />
           <span class="badge" data-testid="cart-badge" *ngIf="notifyCount > 0">
@@ -33,13 +33,13 @@
           </span>
         </div>
         <span class="lable">Giỏ hàng</span>
-      </button>
-    </div>
+      </a>
+    </nav>
 
     <!-- Đăng nhập / Đăng ký -->
 
-    <div>
-      <button aria-label="">
+    <nav class="user-wrapper">
+      <a href="/" class="nav-item">
         <div class="icon-wrapper">
           <lucide-icon name="User" aria-label="Đăng nhập. Đăng ký" />
           <span
@@ -51,7 +51,7 @@
           </span>
         </div>
         <span class="lable">Đăng nhập</span>
-      </button>
-    </div>
+      </a>
+    </nav>
   </div>
 </header>
